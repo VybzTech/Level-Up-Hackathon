@@ -1,0 +1,17 @@
+* {
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+nav.shopifyNav,
+nav.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav.shopifyNav {
+  background-color: #1c181d;
+  width: 100%;
+}
