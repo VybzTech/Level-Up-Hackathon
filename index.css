@@ -1,8 +1,6 @@
 * {
-  /* display: none; */
   box-sizing: border-box;
   margin: 0;
-  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
   font-family: Inter;
   padding: 0;
 }
@@ -11,6 +9,9 @@ body {
 }
 main {
   padding: 4rem 10rem;
+}
+button:hover {
+  cursor: pointer;
 }
 nav.search,
 nav.shopifyNav,
@@ -81,7 +82,6 @@ nav .profile .bell {
 }
 
 nav .profile .bell img {
-  /* background: #e3e3e3; */
   color: #e3e3e3;
   padding: 8px;
 }
@@ -126,18 +126,9 @@ nav .profile .bell img {
   gap: 8px;
   display: flex;
 }
-/* .toast .toastBtn button{ */
-
 .setup {
   height: 100%;
   width: 100%;
-  /* 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-    align-items: flex-start;
-     */
 }
 .setupWrapper {
   padding: 1rem;
@@ -147,19 +138,19 @@ nav .profile .bell img {
   border-radius: 18px;
   border: 1px #dbdbdb solid;
   justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
   display: flex;
   color: #303030;
 }
 .col {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .setupWrapper h4 {
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.9;
 }
 .setupWrapper p {
   font-size: 13px;
@@ -191,33 +182,19 @@ nav .profile .bell img {
   background: #1a1a1a;
 }
 .setup button {
+  border-radius: 8px;
+  outline: none;
+  border: none;
   width: fit-content;
+  margin-right: 0.5rem;
+  padding: 3px 3px 1px 2px;
+  background: none;
+  transition: all 200mx ease-in-out;
+}
+.setup button:hover {
+  background-color: #f7f7f7;
 }
 .setup button img {
   object-fit: contain;
   width: 1.5rem;
 }
-/* 
-
-align-self: stretch;
-                padding: 8px;
-                justify-content: space-between;
-                align-items: flex-start;
-                display: inline-flex;
-
-flex-direction: column;
-                  justify-content: flex-start;
-                  align-items: flex-start;
-                  gap: 16px;
-                  display: inline-flex;
-
-
-
-                  style="
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    gap: 4px;
-                    display: flex;
-                  "
-*/
