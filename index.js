@@ -37,5 +37,22 @@ profileBtn.addEventListener("click", () => {
     menuDropdown.style.display === "none" ? "block" : "none";
 });
 
-// };
-// )
+// SETUP GUIDE TOGGLE PANEL
+const setupDivs = document.querySelectorAll(
+  ".setup .setupContentWrapper .setupContent"
+);
+setupDivs.forEach((div) => {
+  // WHEN CLICKED CHECK WCH HAS THE CLASS
+  div.addEventListener("click", () => {
+    // CHECK WCH ONE HAS THE ACTIVE CLASS
+    var active = document.querySelector(
+      ".setup .setupContentWrapper .setupContent.active"
+    );
+    if (!div.classList.contains("active")) {
+      // IF NOT REMOVE THE CLASS FROM AVAIL ND ADD TO THE CLICKED ONE
+      active.classList.remove("active");
+      div.classList.toggle("active");
+    }
+    // IF ITS THE ACTIVE ONE DO NOTHING
+  });
+});
