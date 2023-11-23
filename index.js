@@ -1,6 +1,4 @@
 // window. addEventListener('DOMContentLoaded', () => {
-// document.
-// ()=>{
 //  SET ARIA LABEL FOR MENU BUTTTONS
 var buttons = document
   .querySelectorAll('button[role="menuitem"]')
@@ -35,14 +33,12 @@ bellBtn.addEventListener("click", () => {
 });
 
 // PROFILE TOGGLE
-
 profileBtn.addEventListener("click", () => {
   // CHECK AVALABLE MODALS
   if ((alertDropdown.style.display = "block")) {
     alertDropdown.style.display = "none";
   }
   // SET DISPLAY OF ALERT MODAL
-
   menuDropdown.style.display =
     menuDropdown.style.display === "none" ? "block" : "none";
 });
