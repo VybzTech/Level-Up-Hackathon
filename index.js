@@ -1,6 +1,11 @@
 // window. addEventListener('DOMContentLoaded', () => {
 // document.
 // ()=>{
+//  SET ARIA LABEL FOR MENU BUTTTONS
+var buttons = document
+  .querySelectorAll('button[role="menuitem"]')
+  .forEach((btn) => btn.setAttribute("aria-label", btn.textContent.trim()));
+
 // CLOSE TOAST FUNCTION
 const remove4rmDom = (e) => (e.parentElement.style.display = "none");
 
@@ -13,14 +18,17 @@ setupTogBtn.addEventListener("click", () => {
 
 //  MODAL VARIABLES
 const bellBtn = document.querySelector(".bell");
+console.log(bellBtn);
 const alertDropdown = document.querySelector(".alert");
 const profileBtn = document.querySelector(".name");
-const menuDropdown = document.querySelector(".menu");
+const menuDropdown = document.querySelector("#menu");
 
 // ALERT TOGGLE
 bellBtn.addEventListener("click", () => {
   // CHECK AVALABLE MODALS
-  menuDropdown.style.display = "none";
+  if ((menuDropdown.style.display = "block")) {
+    menuDropdown.style.display = "none";
+  }
   // SET DISPLAY OF ALERT MODAL
   alertDropdown.style.display =
     alertDropdown.style.display === "none" ? "block" : "none";
@@ -30,7 +38,9 @@ bellBtn.addEventListener("click", () => {
 
 profileBtn.addEventListener("click", () => {
   // CHECK AVALABLE MODALS
-  alertDropdown.style.display = "none";
+  if ((alertDropdown.style.display = "block")) {
+    alertDropdown.style.display = "none";
+  }
   // SET DISPLAY OF ALERT MODAL
 
   menuDropdown.style.display =

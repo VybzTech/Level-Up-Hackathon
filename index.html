@@ -71,13 +71,27 @@
       </div>
       <div class="search">
         <img src="./assests/Search.svg" alt="Search Icon" />
-        <input type="text" name="search" placeholder="Search" />
+        <input
+          aria-label="Search input"
+          type="text"
+          name="search"
+          placeholder="Search"
+          lang="en"
+          spellcheck="true"
+          
+        />
       </div>
       <div class="profile">
-        <button class="bell"
+        <button class="bell" aria-label="Alert button"
           ><img src="./assests/Icons.svg" alt="Bell Logo" />
         </button>
-        <button class="name"
+        <button
+          class="name"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-label="Menu button"
+          tabindex="0"
+          aria-expanded="false"
           ><p>Davii Collections </p><span class="avatar">DC</span></button
         >
       </div>
@@ -97,44 +111,45 @@
           <p> Alerts about your store and account will show here </p>
         </div>
       </div>
-      <div class="menu">
-        <ul class="dropdownMenu">
-          <li class="profileBar">
+      <div id="menu">
+        <!-- <div class="menu"  > -->
+        <ul class="dropdownMenu" aria-label="Davii Collections Menu" tabindex="-1">
+          <li class="profileBar" aria-disabled="true" aria-readonly="true">
             <div> <span>DC</span> <p>Davii Collections</p> </div>
             <div><img src="./assests/Check.svg" alt="Check" /></div>
           </li>
           <li class="stores">
-            <button>
+            <button role="menuitem">
               <img src="./assests/StoreMinor.svg" alt="store" />All stores
             </button>
           </li>
           <li class="divider"></li>
           <li>
-            <button> Help Center </button>
+            <button role="menuitem"> Help Center </button>
           </li>
           <li>
-            <button> Changelog </button>
+            <button role="menuitem"> Changelog </button>
           </li>
           <li>
-            <button> Community forums </button>
+            <button role="menuitem"> Community forums </button>
           </li>
           <li>
-            <button> Hire a Shopify Partner </button>
+            <button role="menuitem"> Hire a Shopify Partner </button>
           </li>
           <li>
-            <button> Keyboard shortcuts </button>
+            <button role="menuitem"> Keyboard shortcuts </button>
           </li>
           <li class="divider"></li>
           <li class="last">
-            <button>
+            <button aria-disabled="true" aria-label="User name and Email address">
               <span> David Micheal </span><span> davidmicheal@gmail.com </span>
             </button>
           </li>
           <li>
-            <button> Manage account </button>
+            <button role="menuitem"> Manage account </button>
           </li>
           <li>
-            <button> Log out </button>
+            <button role="menuitem"> Log out </button>
           </li>
         </ul>
       </div>
