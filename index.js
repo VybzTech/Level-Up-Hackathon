@@ -1,5 +1,15 @@
 // window. addEventListener('DOMContentLoaded', () => {
-//  SET ARIA LABEL FOR MENU BUTTTONS
+const goHome = () => {
+  window.open("https://shopify.com/", "_blank");
+};
+
+const goAdmin = () => {
+  window.open("https://admin.shopify.com/", "_blank");
+};
+const goPay = () => {
+  window.open("https://shopify.com/pricing/", "_blank");
+};
+//  SET ARIA LABEL FOR MENU BUTTTONS0
 var buttons = document
   .querySelectorAll('button[role="menuitem"]')
   .forEach((btn) => btn.setAttribute("aria-label", btn.textContent.trim()));
@@ -13,10 +23,11 @@ setupTogBtn.addEventListener("click", () => {
   setupTogBtn.classList.toggle("tog");
   setupContWrap.classList.toggle("fullInfo");
 });
+setupTogBtn.removeEventListener("click", () => {});
 
 //  MODAL VARIABLES
 const bellBtn = document.querySelector(".bell");
-console.log(bellBtn);
+// console.log(bellBtn);
 const alertDropdown = document.querySelector(".alert");
 const profileBtn = document.querySelector(".name");
 const menuDropdown = document.querySelector("#menu");
@@ -31,6 +42,7 @@ bellBtn.addEventListener("click", () => {
   alertDropdown.style.display =
     alertDropdown.style.display === "none" ? "block" : "none";
 });
+bellBtn.removeEventListener("click", () => {});
 
 // PROFILE TOGGLE
 profileBtn.addEventListener("click", () => {
@@ -42,6 +54,7 @@ profileBtn.addEventListener("click", () => {
   menuDropdown.style.display =
     menuDropdown.style.display === "none" ? "block" : "none";
 });
+profileBtn.removeEventListener("click", () => {});
 
 // SETUP GUIDE TOGGLE PANEL
 const setupDivs = document.querySelectorAll(
@@ -61,4 +74,21 @@ setupDivs.forEach((div) => {
     }
     // IF ITS THE ACTIVE ONE DO NOTHING
   });
+  div.removeEventListener("click", () => {});
+});
+// RANGE MODIFER CODE
+const checkBoxes = document.querySelectorAll("input.icon");
+const rangeCount = document.querySelector(".range > p > span");
+const rangeDiv = document.querySelector(".range > .progressBar > div");
+var checkedBoxes = [];
+checkBoxes.forEach((box, i) => {
+  box.addEventListener("click", () => {
+    checkBoxes.forEach((box) => box.checked && checkedBoxes.push(box));
+    rangeCount.innerHTML = checkedBoxes.length.toString();
+    //  Change the Range's width
+    rangeDiv.style.width =
+      ((100 / checkBoxes.length) * checkedBoxes.length).toString() + "%";
+    checkedBoxes = [];
+  });
+  box.removeEventListener("click", () => {});
 });

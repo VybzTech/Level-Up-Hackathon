@@ -9,11 +9,7 @@
   </head>
   <body>
     <nav class="shopifyNav">
-      <div class="logo">
-        <!-- l  shopify.com-->
-        <!-- menu takes to  admin.shopify.com-->
-        <!-- select a plan btn shopify.com/pricing -->
-        <!-- when I click on the circle checkbox (empty) on the left side of an onboarding step title, it marks that step as completed, and expands the next incomplete step. If I click again, it marks the step as incomplete. As I mark steps as completed or incomplete, I see the onboarding progress bar showing the correct progress.-->
+      <div class="logo" onclick="goHome()">
         <img src="./assests/Shopify Logo.svg" alt="Shopify Icon" />
         <img src="./assests/Shopify.svg" alt="Shopify Logo" />
       </div>
@@ -64,9 +60,14 @@
           aria-label="Davii Collections Menu"
           tabindex="-1"
         >
-          <li class="profileBar" aria-disabled="true" aria-readonly="true">
+          <li
+            class="profileBar"
+            aria-disabled="true"
+            aria-readonly="true"
+            onclick="goAdmin()"
+          >
             <div> <span>DC</span> <p>Davii Collections</p> </div>
-            <div><img src="./assests/Check.svg" alt="Check" /></div>
+            <div><img src="./assests/Check-Outline.svg" alt="Check" /></div>
           </li>
           <li class="stores">
             <button role="menuitem">
@@ -111,7 +112,9 @@
           <div class="toastWrapper">
             Extend your trial for $1/month for 3 months on select plans.
             <div>
-              <button class="toastBtn"> Select a plan </button>
+              <button class="toastBtn" onclick="goPay()">
+                Select a plan
+              </button>
             </div>
           </div>
           <button class="close" onclick="remove4rmDom(this)">
@@ -130,21 +133,30 @@
                   </p>
                 </div>
                 <div class="range">
-                  <p>1 / 5 completed</p>
+                  <p> <span> 0 </span> / 5 completed</p>
                   <div class="progressBar">
                     <div></div>
                   </div>
                 </div>
               </div>
-              <button class="setup tog">
+              <button class="setup tog" aria-label="Toggle show setup">
                 <img src="./assests/Down.svg" alt="Down" />
               </button>
             </div>
             <div class="setupContentWrapper">
               <div class="setupContent active">
-                <div class="icon"
-                  ><img src="./assests/Dotted_Ellipse.svg" alt="Loading icon"
-                /></div>
+                <label
+                  for="Cutomize Icon"
+                  class="label"
+                  aria-label="Complete Customize Theme Step 1"
+                >
+                  <input
+                    aria-label="Complete Customize Theme - Step 1 Checkbox"
+                    class="icon"
+                    name="Cutomize Icon"
+                    type="checkbox"
+                  />
+                </label>
                 <div class="content">
                   <p class="head">Customize your online store </p>
                   <p>
@@ -167,9 +179,19 @@
                 /></div>
               </div>
               <div class="setupContent">
-                <div class="icon"
-                  ><img src="./assests/Dotted_Ellipse.svg" alt="Loading icon"
-                /></div>
+                <label
+                  for="Cutomize Icon"
+                  class="label"
+                  aria-label="Complete Add Product Step 2"
+                >
+                  <input
+                    aria-label="Complete Add Product Step - 2 Checkbox"
+                    class="icon"
+                    name="Cutomize Icon"
+                    type="checkbox"
+                  />
+                </label>
+
                 <div class="content">
                   <p class="head">Add your first product</p>
                   <p>
@@ -189,9 +211,18 @@
                 /></div>
               </div>
               <div class="setupContent">
-                <div class="icon"
-                  ><img src="./assests/Dotted_Ellipse.svg" alt="Loading icon"
-                /></div>
+                <label
+                  for="Cutomize Icon"
+                  class="label"
+                  aria-label="Complete Add domain Step 3"
+                >
+                  <input
+                    aria-label="Complete Add domain - Step 3 Checkbox"
+                    class="icon"
+                    name="Cutomize Icon"
+                    type="checkbox"
+                  />
+                </label>
                 <div class="content">
                   <p class="head">Add a custom domain</p>
                   <p>
@@ -208,9 +239,18 @@
                 /></div>
               </div>
               <div class="setupContent">
-                <div class="icon"
-                  ><img src="./assests/Dotted_Ellipse.svg" alt="Loading icon"
-                /></div>
+                <label
+                  for="Cutomize Icon"
+                  class="label"
+                  aria-label="Complete  Name store Step 4"
+                >
+                  <input
+                    aria-label="Complete  Name store - Step 4 Checkbox"
+                    class="icon"
+                    name="Cutomize Icon"
+                    type="checkbox"
+                  />
+                </label>
                 <div class="content">
                   <p class="head">Name your store</p>
                   <p>
@@ -227,9 +267,18 @@
                 /></div>
               </div>
               <div class="setupContent">
-                <div class="icon"
-                  ><img src="./assests/Dotted_Ellipse.svg" alt="Loading icon"
-                /></div>
+                <label
+                  for="Cutomize Icon"
+                  class="label"
+                  aria-label="Complete Set up payment Step 5"
+                >
+                  <input
+                    aria-label="Complete Set up payment - Step 5 Checkbox"
+                    class="icon"
+                    name="Cutomize Icon"
+                    type="checkbox"
+                  />
+                </label>
                 <div class="content">
                   <p class="head">Setup a payment provider</p>
                   <p
